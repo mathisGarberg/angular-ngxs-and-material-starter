@@ -22,7 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "pretty-quick --staged"
+      "pre-push": "pretty-quick --staged && ng lint"
     }
   },
   "private": true,
