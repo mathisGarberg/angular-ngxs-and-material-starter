@@ -1,5 +1,12 @@
 # Angular, NGXS & Material Starter
 
+by [@mathisGarberg](https://twitter.com/MathGarb)
+
+## Table of Content
+
+- [Live Demo]
+- [Getting Started]
+
 ## Initial setup
 * Run `git clone ...`
 * Run `npm install` in the `./angular-material-starter` folder

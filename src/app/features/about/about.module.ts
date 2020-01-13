@@ -11,7 +11,7 @@ import { SharedModule } from '@shared/shared.module';
     AboutComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule, 
     AboutRoutingModule,
     SharedModule
   ]
