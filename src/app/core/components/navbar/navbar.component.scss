@@ -1,0 +1,10 @@
+.toolbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+
+    fa-icon {
+        font-size: 24px;
+    }
+}

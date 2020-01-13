@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: .5rem;
+
+    .left-content {
+        min-width: 14rem;
+    }
+
+    .mid-content {
+        flex: 1 0 auto;
+        margin-top: 64px;
+        overflow: hidden;
+    }
+}

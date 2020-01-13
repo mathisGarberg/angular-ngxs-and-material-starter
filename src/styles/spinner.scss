@@ -1,0 +1,106 @@
+@mixin ellipsisAnimation($left, $left3, $left4, $animationName, $animationTime) {
+    @for $i from 1 through 4 {
+        div:nth-child(#{$i}) {
+            @if $i == 1 or $i == 2 {
+                left: $left1 + px;
+                animation: $animationName + $i $animationTime + s infinite;
+            }
+            @else if ($i == 3) {
+                left: $left3 + px;
+                animation: $animationName + 2 $animationTime + s infinite;
+            }
+            @else if ($i == 4) {
+                left: $left4 + px;
+                animation: $animationName + 3 $animationTime + s infinite;
+            }
+        }
+    }
+}
+
+/**
+ * spinner prints out a spinner with 4 bullets
+ * @parameters
+ * name: name
+ * ellipsis-size: size of the bullets
+ * left1: first 2 bullets uses left1
+ * left2: for third bullet
+ * left3: for second bullets
+ * animationTime: how fast things animate
+**/
+
+@mixin spinner($name, $ellipsis-size, $left1, $left2, $left3, $animationTime) {
+    div {
+        position: absolute;
+        width: $ellipsis-size;
+        height: $ellipsis-size;
+        border-radius: 50;
+        background: #000000;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+    @include ellipsisAnimation($left1, $left2, $left3, $name, $animationTime);
+}
+
+@mixin ellipsis-keyFrame($name, $value) {
+    @keyframes #{$name + 1} {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes #{$name + 3} {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+    @keyframes #{$name + 2} {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate($value + px, 0);
+        }
+    }
+}
+
+.spinner-container {
+    width: 100%;
+    text-align: center;
+}
+
+.spinner-ellipsis-11px {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 11px;
+    @include spinner(spinner-ellipsis-11px, 11, 6, 26, 45, .6);
+}
+
+@include ellipsis-keyFrame(spinner-ellipsis-11px, 19);
+
+.spinner-ellipsis-7px {
+    display: inline-block;
+    position: relative;
+    width: 38px;
+    height: 7px;
+
+    @include spinner(spinner-ellipsis-7px, 6, 6, 18, 28, .7)
+}
+
+@include ellipsis-keyFrame(spinner-ellipsis-7px, 10);
+
+.spinner-ellipsis-3px {
+    display: inline-block;
+    position: relative;
+    width: 23px;
+    height: 4px;
+
+    @include spinner(spinner-ellipsis-3px, 3, 4, 10, 16, .8);
+}
+
+@include ellipsis-keyFrame(spinner-ellipsis-3px, 7);

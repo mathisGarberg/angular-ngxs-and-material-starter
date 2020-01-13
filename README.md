@@ -1,27 +1,45 @@
-# AngularMaterialStarter
+# Angular, NGXS & Material Starter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+## Initial setup
+* Run `git clone ...`
+* Run `npm install` in the `./angular-material-starter` folder
+* Install Angular CLI version 8.0, `npm install -g @angular/cli --latest`
 
-## Development server
+## Deployment
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## DNS
+
+## Feedback
+
+
+## How to run
+
+When startin the application please use `npm start`, this triggers `ng serve --open --port 50000.
+
+## Tips for developers
+
+We've been using VS Code to deveop, and would like to recommend the following plugins.
+
+## End to end testing
+
+### **Step 1** - Start dev server and cypress
+
+Run the following command `npm run e2e:dev`, this will open two windows. One compiles and runs Angular. the other runs Cypress. Wait for the angular application
+to finish compiling before you continue.
+
+![cypress 1](./wiki/images/cypress-1.PNG)
+
+### **Step 2** - Run tests
+
+![cypress 3](./wiki/gifs/angular-material-starter.gif)
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng build` to execute the unit tests via [Karma](https://karma-runner.github.io)
 
-## Build
+## Furhter help
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on the Angular CLI, use `ng help` or check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)

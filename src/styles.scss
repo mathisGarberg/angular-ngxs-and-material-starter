@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~ngx-bar-rating/themes/br-default-theme";
+
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Open Sans, Arial, sans-serif'
+);
+
+@include mat-core($custom-typography);
+
+@import './themes/default-theme';
+@import './themes/dark-theme';
+
+@mixin custom-components-theme($theme) {
+// component 1
+// component 2
+}
+
+.app-default-theme {
+  @include angular-material-theme($app-default-theme);
+  @include mat-toolbar-theme($app-default-toolbar-theme);
+}
+
+.app-dark-theme {
+  @include angular-material-theme($app-dark-theme);
+  @include mat-toolbar-theme($app-dark-toolbar-theme);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', 'sans-serif';
+}

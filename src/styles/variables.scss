@@ -1,0 +1,51 @@
+@import '~@angular/material/theming';
+
+$toolbar-breakpoint: 600px;
+
+$fa-font-path: '~@fortawesome/fontawesome-free-webfonts/webfonts';
+
+$link-hover-decoration: none;
+$label-margin-bottom: 0;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$success-colors: mat-palette($mat-green, 400);
+$warning-colors: mat-palette($mat-amber, 400);
+
+$black: #171717;
+$black-light: #333333;
+$gray-dark: #606060;
+$gray: #aaaaaa;
+$gray-light: #dddddd;
+$gray-light2: #ececec;
+$gray-light3: #dadada;
+$gray-light4: #ecedec;
+$white: #ffffff;
+$yellow-dark: #e7a800;
+$yellow: #ffcc00;
+$yellow-soft: #ffeb9b;
+$red: #cc0000;
+$red-bright: #E63C37;
+$green: #009900;
+
+$white-hover: rgba(255,255,255,.5);
+$background: #f5f5f5;
+$text-black: rgba(23,23,23,.9);
+$text-white: rgba(255,255,255,.9);
+
+$phone-width: 768px;
+$form-width: 20.25rem;
+
+$z-index-focused-link: 1;
+$z-index-feedback-link: 2;
+$z-index-skipto-link: 3;
+
+$large-screen: '1599px';
+$tablet-screen: '979px';
+$mobile-screen: '767px';
