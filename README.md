@@ -14,6 +14,10 @@ by [@mathisGarberg](https://twitter.com/MathGarb)
 
 ## Deployment
 
+## Learning Materials
+* [Blog post about the ultimate Angular folder structure]()
+* [Blog post about clean code principles you should adapt to your Angular project]()
+
 
 ## DNS
 
