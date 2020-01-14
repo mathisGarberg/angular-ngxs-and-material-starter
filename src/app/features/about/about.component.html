@@ -1,6 +1,17 @@
 <div class="container">
     <h2>Change About Me Section</h2>
-    <form [formGroup]="aboutForm" (ngSubmit)="onSubmit()">
-        
-    </form>
+    <mat-card>
+        <form [formGroup]="aboutForm" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px">
+            <mat-form-field>
+                <input matInput autocomplete="off" placeholder="Brukernavn" formControlName="username" #usernameControl>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <input matInput autocomplete="off" placeholder="Epost" formControlName="email">
+            </mat-form-field>
+    
+            <app-address-one [addressOneForm]="addressOneForm"></app-address-one >
+            <app-address-two [addressTwoForm]="addressTwoForm"></app-address-two>
+        </form>
+    </mat-card>
 </div>

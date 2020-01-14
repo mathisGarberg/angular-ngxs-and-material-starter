@@ -1,5 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit, ChangeDetectionStrategy, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
@@ -9,10 +9,12 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./about.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
 
   aboutForm: FormGroup;
   formValueChanged$: Observable<any>;
+
+  @ViewChild('usernameControl', { static: false }) private usernameControl: ElementRef;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -24,12 +26,34 @@ export class AboutComponent implements OnInit {
     );
   }
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.usernameControl.nativeElement.focus();
+    });
+  }
+
   buildForm(): void {
     this.aboutForm = this.formBuilder.group({
-      autoSave: [false],
-      username: ['', [Validators.required]],
-      email: ['', [Validators.required]]
+      autoSave: new FormControl(false),
+      username: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      addressOne: new FormGroup({
+        street: new FormControl(''),
+        zipCode: new FormControl('')
+      }),
+      addressTwo: new FormGroup({
+        street: new FormControl(''),
+        zipCode: new FormControl('')
+      })
     });
+  }
+
+  get addressOneForm() {
+    return this.aboutForm.get('addressOne');
+  }
+
+  get addressTwoForm() {
+    return this.aboutForm.get('addressOne');
   }
 
   onSubmit(): void {

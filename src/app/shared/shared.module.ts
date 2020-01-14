@@ -38,6 +38,7 @@ import {
   faInstagram,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 library.add(
   faBars,
@@ -77,13 +78,16 @@ library.add(
   imports: [
     MaterialModule,
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FlexLayoutModule,
   ],
   exports: [
     MaterialModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule,
+
   ]
 })
 export class SharedModule { }
