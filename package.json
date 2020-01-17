@@ -48,7 +48,7 @@
     "@markpieszak/ng-application-insights": "^8.0.1",
     "@ngxs/devtools-plugin": "^3.6.0",
     "@ngxs/hmr-plugin": "^3.6.1",
-    "@ngxs/logger-plugin": "^3.6.0",
+    "@ngxs/logger-plugin": "^3.6.1",
     "@ngxs/router-plugin": "^3.6.0",
     "@ngxs/schematics": "0.0.1-alpha.5",
     "@ngxs/storage-plugin": "^3.6.0",
