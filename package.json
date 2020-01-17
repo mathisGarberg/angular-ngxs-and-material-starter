@@ -51,7 +51,7 @@
     "@ngxs/logger-plugin": "^3.6.0",
     "@ngxs/router-plugin": "^3.6.0",
     "@ngxs/schematics": "0.0.1-alpha.5",
-    "@ngxs/storage-plugin": "^3.6.0",
+    "@ngxs/storage-plugin": "^3.6.1",
     "@ngxs/store": "^3.6.1",
     "ajv": "^6.10.2",
     "browser-detect": "^0.2.28",
