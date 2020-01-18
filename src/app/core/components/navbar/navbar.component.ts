@@ -1,4 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, ViewChild } from '@angular/core';
+import { SidenavService } from '@app/core/services/sidenav.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +11,16 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 export class NavbarComponent implements OnInit {
   @Input() public isActivated: boolean;
 
-  constructor() { }
+
+
+  constructor(private sidenavService: SidenavService) { }
 
   ngOnInit() {
+
+  }
+
+  toggleSideMenu(): void {
+    this.sidenavService.toggleSideMenu();
   }
 
 }

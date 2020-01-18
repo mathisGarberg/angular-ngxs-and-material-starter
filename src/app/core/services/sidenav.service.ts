@@ -8,6 +8,7 @@ export class SidenavService {
   private sideMenu: MatSidenav;
 
   public setSideMenu(sidenav: MatSidenav) {
+    console.log(sidenav);
     this.sideMenu = sidenav;
   }
 

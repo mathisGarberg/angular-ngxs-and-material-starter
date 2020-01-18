@@ -6,6 +6,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { PlTableComponent } from './components/pl-table/pl-table.component';
 
+import { RouterModule } from '@angular/router';
+
 // state management
 import { NgxsModule, StateContext } from '@ngxs/store';
 import { NgxsRouterPluginModule, RouterStateSerializer } from '@ngxs/router-plugin';
@@ -36,6 +38,8 @@ import { NotificationsComponent } from './components/notifications/notifications
 
     MaterialModule,
     FontAwesomeModule,
+
+    RouterModule,
 
     AuthModule,
     // store

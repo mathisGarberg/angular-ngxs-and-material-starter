@@ -2,13 +2,37 @@
   <mat-toolbar color="primary" class="main-header">
     <ng-container>
 
-      <button mat-icon-button class="d-md-none">
-          <fa-icon icon="bars"></fa-icon>
-      </button>
+      <span class="main-header__content-left">
+        <button mat-button (click)="toggleSideMenu()">
 
-      <button>
-        Mathis
-      </button>
+        </button>
+
+        <button mat-icon-button class="d-md-none">
+          <fa-icon icon="bars"></fa-icon>
+        </button>
+
+        <a [routerLink]="['/']">
+          <img src="" alt="Logo">
+        </a>
+
+        <button>
+          Mathis
+        </button>
+      </span>
+
+      <span class="main-header__content-mid">
+
+        <div>
+
+        </div>
+
+      </span>
+
+      <span class="main-header__content-right">
+
+        <div></div>
+
+      </span>
 
       <span routerLink="" class="branding spacer center d-inline d-sm-none">
           <!-- <img [src]="logo" /> -->

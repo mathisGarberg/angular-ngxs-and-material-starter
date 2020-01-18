@@ -17,7 +17,7 @@ import { AppInsightsService } from '@markpieszak/ng-application-insights';
 // states and actions
 
 // icons
-// 
+//
 
 @Component({
   selector: 'app-root',
@@ -55,7 +55,6 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    
   }
 
   ngOnDestroy(): void {

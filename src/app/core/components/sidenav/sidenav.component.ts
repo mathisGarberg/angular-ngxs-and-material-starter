@@ -1,4 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material';
+import { SidenavService } from '@app/core/services/sidenav.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,9 +10,12 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('sidemenu', { static: false }) sideMenu: MatSidenav;
+
+  constructor(private sidenavService: SidenavService) { }
 
   ngOnInit() {
+    this.sidenavService.setSideMenu(this.sideMenu);
   }
 
 }

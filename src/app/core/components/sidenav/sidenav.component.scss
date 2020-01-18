@@ -1,12 +1,16 @@
 .sidenav-container {
-    height: 100%;
-    width: 100%;
+    // height: 100%;
+    // width: 100%;
 
     position: absolute;
-    top: 0;
+    top: 4rem;
     left: 0;
     right: 0;
     bottom: 0;
     display: flex;
     flex-direction: column;
+}
+
+.sidenav {
+  border-right: 1px solid #000;
 }
