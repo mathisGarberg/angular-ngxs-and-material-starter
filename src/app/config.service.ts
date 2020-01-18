@@ -4,17 +4,15 @@ import { Injectable } from '@angular/core';
 
 export class ConfigService {
     constructor() { }
-    
+
     Init() {
- 
-        return new Promise<void>((resolve, reject) => {
-            console.log("AppInitService.init() called");
-            ////do your initialisation stuff here  
-            setTimeout(() => {
-                console.log('AppInitService Finished');
-                resolve();
-            }, 500);
- 
-        });
+      return new Promise<void>((resolve, reject) => {
+        console.log('AppInitService.init() called');
+        // do your initialisation stuff here
+        setTimeout(() => {
+          console.log('AppInitService Finished');
+          resolve();
+        }, 500);
+      });
     }
 }

@@ -20,6 +20,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthModule } from './auth/auth.module';
 
 import { ApplicationInsightsModule, AppInsightsService } from '@markpieszak/ng-application-insights';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ApplicationInsightsModule, AppInsightsService } from '@markpieszak/ng-a
     PageNotFoundComponent,
     SidenavComponent,
     PlTableComponent,
+    NotificationsComponent,
   ],
   imports: [
     CommonModule,

@@ -8,6 +8,13 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
+  themes = [
+    { value: 'DEFAULT-THEME', label: 'blue' },
+    { value: 'LIGHT-THEME', label: 'light' },
+    { value: 'NATURE-THEME', label: 'nature' },
+    { value: 'BLACK-THEME', label: 'dark' }
+  ];
+
   constructor() { }
 
   ngOnInit() {
