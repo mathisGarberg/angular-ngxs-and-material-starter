@@ -1,6 +1,9 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { StandingsService } from '../../services/standings.service';
 
 import { MatTableDataSource, MatSort } from '@angular/material';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 interface PLTableResultItem {
   leaguePosition: number;
@@ -17,9 +20,14 @@ interface PLTableResultItem {
 })
 export class PlTableComponent implements OnInit {
 
-  constructor() { }
+  teams$: Observable<any>;
+
+  constructor(private standingsService: StandingsService) { }
 
   ngOnInit() {
+    this.standingsService.getStandings()
+      // .pipe(map(r => r.participants))
+      .subscribe(console.log);
   }
 
   setRowColor (position): String {

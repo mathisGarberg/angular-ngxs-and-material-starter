@@ -27,6 +27,7 @@ import { NotificationsComponent } from './components/notifications/notifications
 // states
 import { SettingsState } from './states/settings.state';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FontAwesomeModule,
 
     RouterModule,
+    HttpClientModule,
 
     AuthModule,
     // store
