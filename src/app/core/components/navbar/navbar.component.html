@@ -1,4 +1,4 @@
-<div class="toolbar">
+<!-- <div class="toolbar"> -->
   <mat-toolbar color="primary" class="main-header">
     <ng-container>
 
@@ -30,7 +30,11 @@
 
       <span class="main-header__content-right">
 
-        <div></div>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            Hello
+          </button>
+        </mat-menu>
 
       </span>
 
@@ -39,4 +43,4 @@
       </span>
     </ng-container>
   </mat-toolbar>
-</div>
+<!-- </div> -->

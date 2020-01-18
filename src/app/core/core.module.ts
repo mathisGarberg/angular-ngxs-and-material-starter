@@ -54,6 +54,11 @@ import { NotificationsComponent } from './components/notifications/notifications
   ],
   providers: [
     AppInsightsService,
+  ],
+  exports: [
+    NavbarComponent,
+    SidenavComponent,
+    ContentWrapperComponent
   ]
 })
 export class CoreModule { }
