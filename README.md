@@ -1,4 +1,4 @@
-# Angular, NGXS & Material Starter
+# Aston Villa - Norwegian Fans
 
 by [@mathisGarberg](https://twitter.com/MathGarb)
 

@@ -39,6 +39,9 @@ import {
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ShowErrorsComponent } from './components/show-errors/show-errors.component';
+import { FavoriteButtonComponent } from './components/favorite-button/favorite-button.component';
+import { FollowButtonComponent } from './components/follow-button/follow-button.component';
 
 library.add(
   faBars,
@@ -73,7 +76,10 @@ library.add(
 
 @NgModule({
   declarations: [
-    BigInputComponent
+    BigInputComponent,
+    ShowErrorsComponent,
+    FavoriteButtonComponent,
+    FollowButtonComponent
   ],
   imports: [
     MaterialModule,
