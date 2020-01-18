@@ -1,10 +1,19 @@
-.toolbar {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    z-index: 10;
+@import '../../../../styles/variables';
 
-    fa-icon {
-        font-size: 24px;
-    }
+// .toolbar {
+//     position: fixed;
+//     width: 100%;
+//     display: flex;
+//     z-index: 10;
+
+//     fa-icon {
+//         font-size: 24px;
+//     }
+// }
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+
+
 }
