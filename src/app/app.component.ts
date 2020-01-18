@@ -11,6 +11,10 @@ import { Navigate } from '@ngxs/router-plugin';
 
 import { environment as env } from '@env';
 import { AppInsightsService } from '@markpieszak/ng-application-insights';
+import { SettingsState, SettingsStateModel } from './core/states/settings.state';
+import { map } from 'rxjs/operators';
+import { SidenavService } from './core/services/sidenav.service';
+import { ChangeThemeAction } from './core/actions/settings.action';
 
 // import { SidenavService } from '@core/services';
 
@@ -42,7 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   isAuthorized = false;
 
-  theme$: Observable<string>;
+  theme$: Observable<SettingsStateModel> = this.store.select<SettingsStateModel>(state => state.settings.selectedTheme);
 
   private subs = new SubSink();
 
@@ -50,11 +54,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     private appInsight: AppInsightsService,
-    // private sidenavService: SidenavService,
+    private sidenavService: SidenavService,
     private store: Store
   ) {}
 
   ngOnInit(): void {
+    this.store.dispatch(new ChangeThemeAction('app-dark-theme'));
   }
 
   ngOnDestroy(): void {

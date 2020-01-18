@@ -24,6 +24,10 @@ import { AuthModule } from './auth/auth.module';
 import { ApplicationInsightsModule, AppInsightsService } from '@markpieszak/ng-application-insights';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 
+// states
+import { SettingsState } from './states/settings.state';
+
+
 @NgModule({
   declarations: [
     ContentWrapperComponent,
@@ -43,7 +47,9 @@ import { NotificationsComponent } from './components/notifications/notifications
 
     AuthModule,
     // store
-    NgxsModule.forRoot([],
+    NgxsModule.forRoot([
+      SettingsState
+    ],
       { developmentMode: !environment.production }
     ),
     NgxsRouterPluginModule.forRoot(),

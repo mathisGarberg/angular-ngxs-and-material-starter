@@ -1,4 +1,4 @@
-<div id="main" class="theme-wrapper">
+<div id="main" class="theme-wrapper" [class]="'theme-wrapper ' + (theme$ | async)">
   <div class="mat-app-background">
     <app-navbar></app-navbar>
     <app-sidenav>

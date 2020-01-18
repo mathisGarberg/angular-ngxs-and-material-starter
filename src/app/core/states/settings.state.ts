@@ -9,7 +9,7 @@ export interface SettingsStateModel {
 @State<SettingsStateModel>({
     name: 'settings',
     defaults: {
-        selectedTheme: ''
+      selectedTheme: 'hello world'
     }
 })
 export class SettingsState {
@@ -19,6 +19,11 @@ export class SettingsState {
     public static getState(state: SettingsStateModel) {
         return state;
     }
+
+    // @Selector
+    // public state getEffectiveTheme
+
+    // @Action()
 
     @Action(ChangeThemeAction)
     public changeTheme({ patchState }: StateContext<SettingsStateModel>, action: ChangeThemeAction) {
@@ -31,5 +36,11 @@ export class SettingsState {
             classList.remove(...toRemove);
         }
         classList.add(action.changeTheme);
+
+        console.log(classList);
+
+        patchState({
+            selectedTheme: action.changeTheme
+        });
     }
 }
