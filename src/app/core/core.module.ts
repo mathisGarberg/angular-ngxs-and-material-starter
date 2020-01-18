@@ -26,6 +26,7 @@ import { NotificationsComponent } from './components/notifications/notifications
 
 // states
 import { SettingsState } from './states/settings.state';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { SettingsState } from './states/settings.state';
     SidenavComponent,
     PlTableComponent,
     NotificationsComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,

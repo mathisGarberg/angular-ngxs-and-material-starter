@@ -30,7 +30,7 @@ export class SidenavComponent implements OnInit {
 
   constructor(private sidenavService: SidenavService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.sidenavService.setSideMenu(this.sideMenu);
   }
 
