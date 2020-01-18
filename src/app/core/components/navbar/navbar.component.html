@@ -1,6 +1,17 @@
-<!-- <div class="toolbar"> -->
+<div class="toolbar" [style.position]="(stickyHeader$ | async) ? 'fixed' : 'inherit'"
+  [class.mat-elevation-z4]="(stickyHeader$ | async)">
   <mat-toolbar color="primary" class="main-header">
     <ng-container>
+
+      <span routerLink="" class="branding spacer center d-inline d-sm-none">
+        <!-- <img [src]="logo" /> -->
+      </span>
+      <span routerLink="" class="branding spacer center d-none d-sm-inline d-md-none">
+        <!-- <img [src]="logo" /> -->
+      </span>
+      <span routerLink="" class="branding spacer d-none d-md-inline">
+        <!-- <img [src]="logo" /> -->
+      </span>
 
       <span class="main-header__content-left">
         <button mat-button (click)="toggleSideMenu()">
@@ -40,4 +51,4 @@
       </span>
     </ng-container>
   </mat-toolbar>
-<!-- </div> -->
+</div>

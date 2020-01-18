@@ -22,4 +22,28 @@ export class PlTableComponent implements OnInit {
   ngOnInit() {
   }
 
+  setRowColor (position): String {
+
+    switch (position) {
+
+      case '1': {
+        return 'first-place';
+      }
+
+      case '2': {
+        return 'second-place';
+      }
+
+      case '3': {
+        return 'third-place';
+      }
+
+      case '22':
+      case '23':
+      case '24': {
+        return 'relegation-place';
+      }
+    }
+  }
+
 }

@@ -1,6 +1,8 @@
 <div id="main" class="theme-wrapper" [class]="'theme-wrapper ' + (theme$ | async)">
   <div class="mat-app-background">
-    <app-navbar></app-navbar>
+    <div class="wrapper">
+      <app-navbar></app-navbar>
+    </div>
     <app-sidenav>
       <app-content-wrapper>
         <router-outlet></router-outlet>

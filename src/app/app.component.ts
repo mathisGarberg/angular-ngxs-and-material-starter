@@ -15,6 +15,7 @@ import { SettingsState, SettingsStateModel } from './core/states/settings.state'
 import { map } from 'rxjs/operators';
 import { SidenavService } from './core/services/sidenav.service';
 import { ChangeThemeAction } from './core/actions/settings.action';
+import { IconService } from './core/services/icon.service';
 
 // import { SidenavService } from '@core/services';
 
@@ -29,22 +30,24 @@ import { ChangeThemeAction } from './core/actions/settings.action';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  isProd = env.production;
   year = new Date().getFullYear();
+  // version = env.versions.app;
 
   languages = ['en', 'no'];
 
   navigation = [
-    { link: 'about', label: 'anms.menu.about' },
-    { link: 'feature-list', label: 'anms.menu.features' },
-    { link: 'examples', label: 'anms.menu.examples' }
+    { link: 'about', label: 'About' },
+    { link: 'feature-list', label: 'News' },
+    { link: 'examples', label: 'Forum' }
   ];
 
   navigationSideMenu = [
     ...this.navigation,
-    { link: 'settings', label: 'anms.menu.settings' }
+    { link: 'settings', label: 'Settings' }
   ];
 
-  isAuthorized = false;
+  isAuthenticated$: Observable<boolean>;
 
   theme$: Observable<SettingsStateModel> = this.store.select<SettingsStateModel>(state => state.settings.selectedTheme);
 
@@ -55,12 +58,27 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private appInsight: AppInsightsService,
     private sidenavService: SidenavService,
-    private store: Store
+    private store: Store,
+    private iconService: IconService
   ) {}
 
+  private static isIEorEdgeOrSafari() {
+    return ['ie', 'edge', 'safari'].includes(browser().name);
+  }
+
   ngOnInit(): void {
+    this.iconService.init();
+
     this.store.dispatch(new ChangeThemeAction('app-dark-theme'));
   }
+
+  // onLoginClick() {
+  //   this.store.dispatch(authLogin());
+  // }
+
+  // onLogoutClick() {
+  //   this.store.dispatch(authLogout());
+  // }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();

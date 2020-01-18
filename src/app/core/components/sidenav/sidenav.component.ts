@@ -12,14 +12,14 @@ import { Observable } from 'rxjs';
 export class SidenavComponent implements OnInit {
 
   navigation = [
-    { link: 'about', label: 'anms.menu.about' },
-    { link: 'feature-list', label: 'anms.menu.features' },
-    { link: 'examples', label: 'anms.menu.examples' }
+    { link: 'about', label: 'About' },
+    { link: 'feature-list', label: 'News' },
+    { link: 'examples', label: 'Forum' }
   ];
 
   navigationSideMenu = [
     ...this.navigation,
-    { link: 'settings', label: 'anms.menu.settings' }
+    { link: 'settings', label: 'Settings' }
   ];
 
   stickyHeader$: Observable<boolean>;

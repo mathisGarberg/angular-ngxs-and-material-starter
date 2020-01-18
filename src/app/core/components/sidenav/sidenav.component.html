@@ -1,5 +1,9 @@
 <mat-sidenav-container class="sidenav-container" hasBackdrop="false">
     <mat-sidenav #sidemenu mode="over" [opened]="true" class="sidenav">
+      <div class="branding">
+        <!-- <img alt="logo" [src]="logo"> -->
+        <!-- <span>{{ 'anms.title.short'}}</span> -->
+      </div>
         <mat-nav-list>
             <a mat-list-item *ngFor="let item of navigationSideMenu" (click)="sideMenu.close()"
             [routerLink]="[item.link]"  routerLinkActive="active">

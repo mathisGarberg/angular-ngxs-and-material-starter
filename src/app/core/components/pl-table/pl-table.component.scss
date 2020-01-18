@@ -6,4 +6,32 @@
   h4 {
     text-transform: uppercase;
   }
+
+  #standings-title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .efl-picture {
+    // content: url("/assets/images/efl-logo.svg");
+    width: 60px;
+    height: 60px;
+  }
+
+  .first-place {
+    background: rgba(84, 167, 89, 0.8);
+  }
+
+  .second-place {
+    background: rgba(84, 167, 89, 0.6);
+  }
+
+  .third-place {
+    background: rgba(84, 167, 89, 0.4);
+  }
+
+  .relegation-place {
+    background: rgba(212, 111, 106, 0.6);
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, ViewChild } from '@angular/core';
 import { SidenavService } from '@app/core/services/sidenav.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { SidenavService } from '@app/core/services/sidenav.service';
 export class NavbarComponent implements OnInit {
   @Input() public isActivated: boolean;
 
-
+  stickyHeader$: Observable<boolean>;
 
   constructor(private sidenavService: SidenavService) { }
 
