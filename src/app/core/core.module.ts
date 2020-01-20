@@ -13,6 +13,7 @@ import { NgxsModule, StateContext } from '@ngxs/store';
 import { NgxsRouterPluginModule, RouterStateSerializer } from '@ngxs/router-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsStoragePluginModule, StorageOption } from '@ngxs/storage-plugin';
+import { NgxsFormPluginModule } from '@ngxs/form-plugin';
 
 import { environment } from '@env';
 
@@ -56,6 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     ],
       { developmentMode: !environment.production }
     ),
+    NgxsFormPluginModule.forRoot(),
     NgxsRouterPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsStoragePluginModule.forRoot(),

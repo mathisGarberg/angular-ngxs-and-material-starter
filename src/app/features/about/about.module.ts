@@ -7,17 +7,21 @@ import { SharedModule } from '@shared/shared.module';
 import { AddressOneComponent } from './components/address-one/address-one.component';
 import { AddressTwoComponent } from './components/address-two/address-two.component';
 
+import { AboutState } from './states/about.state';
+import { NgxsModule } from '@ngxs/store';
+
 
 @NgModule({
   declarations: [
     AboutComponent,
     AddressOneComponent,
-    AddressTwoComponent
+    AddressTwoComponent,
   ],
   imports: [
-    CommonModule, 
+    CommonModule,
     AboutRoutingModule,
-    SharedModule
+    SharedModule,
+    NgxsModule.forFeature([AboutState])
   ]
 })
 export class AboutModule { }

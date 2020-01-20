@@ -93,7 +93,6 @@ library.add(
     ReactiveFormsModule,
     FormsModule,
     FlexLayoutModule,
-
   ]
 })
 export class SharedModule { }

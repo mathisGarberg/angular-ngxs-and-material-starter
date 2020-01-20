@@ -14,10 +14,17 @@ export class NavbarComponent implements OnInit {
 
   stickyHeader$: Observable<boolean>;
 
-  constructor(private sidenavService: SidenavService) { }
+  constructor(
+    private sidenavService: SidenavService,
+    // private userService: UserService
+  ) { }
 
   ngOnInit() {
-
+    // this.userService.currentUser.subscribe(
+    //   (userData) => {
+    //     this.currentUser = userData;
+    //   }
+    // );
   }
 
   toggleSideMenu(): void {

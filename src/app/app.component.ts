@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { SubSink } from 'subsink';
 
 // ngxs
-import { Store } from '@ngxs/store';
+import { Store, Select } from '@ngxs/store';
 import { Navigate } from '@ngxs/router-plugin';
 
 import { environment as env } from '@env';
@@ -50,6 +50,7 @@ export class AppComponent implements OnInit, OnDestroy {
   isAuthenticated$: Observable<boolean>;
 
   theme$: Observable<SettingsStateModel> = this.store.select<SettingsStateModel>(state => state.settings.selectedTheme);
+  @Select(SettingsState.getEffectiveTheme) selectedTheme$: Observable<string>;
 
   private subs = new SubSink();
 
@@ -68,6 +69,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.iconService.init();
+
+    this.selectedTheme$.subscribe(console.log);
 
     this.store.dispatch(new ChangeThemeAction('app-dark-theme'));
   }

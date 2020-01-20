@@ -20,6 +20,11 @@ export class SettingsState {
         return state;
     }
 
+    @Selector()
+    public static getEffectiveTheme(state: SettingsStateModel) {
+      return state.selectedTheme;
+    }
+
     @Action(ChangeAutoNightMode)
     public changeAutoNightMode({patchState}: StateContext<SettingsStateModel>) {
 

@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]="newProfileForm" (ngSubmit)="onSubmit()" ngxsForm="form.details">
+    <mat-card>
+      <mat-card-header>
+          <mat-card-title>
+            <h2>NGXS form sync with a store demo 🚀</h2>
+          </mat-card-title>
+          <mat-card-subtitle>
+          </mat-card-subtitle>
+        <mat-panel-description>
+
+        </mat-panel-description>
+      </mat-card-header>
+
+      <div>
+        <mat-form-field>
+          <input matInput autocomplete="false" placeholder="Text" formControlName="text">
+        </mat-form-field>
+      </div>
+    </mat-card>
+
+    <mat-card-actions>
+      <button mat-raised-button type="submit">Submit</button>
+    </mat-card-actions>
+  </form>
+</div>

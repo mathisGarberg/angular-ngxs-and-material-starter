@@ -16,8 +16,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// import { AboutModule } from './features/about/about.module';
 import { HomeModule } from './features/home/home.module';
+import { AboutModule } from './features/about/about.module';
+import { ProfileModule } from './features/profile/profile.module';
 
 // import { SidenavService } from '@core/services/sidenav.service';
 
@@ -42,6 +43,8 @@ registerLocaleData(localeNb);
 
     // hot-loaded features
     HomeModule,
+    AboutModule,
+    ProfileModule,
 
     // angular
     BrowserModule,

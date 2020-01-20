@@ -14,17 +14,17 @@
       </span>
 
       <span class="main-header__content-left">
-        <button mat-button (click)="toggleSideMenu()">
+        <button mat-icon-button (click)="toggleSideMenu()">
 
         </button>
 
-        <button mat-icon-button class="d-md-none">
+        <button mat-icon-button class="d-md-none" (click)="toggleSideMenu()">
           <fa-icon icon="bars"></fa-icon>
         </button>
 
         <a [routerLink]="['/']">
-          <img src="/src/assets/images/aston-villa-logo.svg" alt="Logo" class="logo">
-          <img src="/src/assets/images/aston-villa-logo.svg" alt="Logo" class="logo">
+          <!-- <img src="/src/assets/images/aston-villa-logo.svg" alt="Logo" class="logo">
+          <img src="/src/assets/images/aston-villa-logo.svg" alt="Logo" class="logo"> -->
         </a>
       </span>
 
@@ -35,6 +35,15 @@
         </div>
 
       </span>
+
+      <!-- <li class="nav-item">
+        <a class="nav-link"
+          [routerLink]="['/profile', currentUser.username]"
+          routerLinkActive="active">
+          <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" />
+          {{ currentUser.username }}
+        </a>
+      </li> -->
 
       <span class="main-header__content-right">
 

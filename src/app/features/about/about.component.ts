@@ -28,7 +28,9 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.usernameControl.nativeElement.focus();
+      if (this.usernameControl) {
+        this.usernameControl.nativeElement.focus();
+      }
     });
   }
 
