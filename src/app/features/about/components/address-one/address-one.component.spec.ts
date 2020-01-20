@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AddressOneComponent } from './address-one.component';
+import { SharedModule } from '@shared/shared.module';
 
 describe('AddressOneComponent', () => {
   let component: AddressOneComponent;
@@ -8,7 +9,12 @@ describe('AddressOneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddressOneComponent ]
+      declarations: [ AddressOneComponent ],
+      imports: [
+        ReactiveFormsModule,
+        FormsModule,
+        SharedModule
+      ]
     })
     .compileComponents();
   }));
@@ -16,7 +22,7 @@ describe('AddressOneComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AddressOneComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    // fixture.detectChanges();
   });
 
   it('should create', () => {

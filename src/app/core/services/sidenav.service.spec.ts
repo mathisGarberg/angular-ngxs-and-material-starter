@@ -1,9 +1,16 @@
-import { TestBed } from '@angular/core/testing';
-
+import { TestBed, async } from '@angular/core/testing';
+import { SharedModule } from '@shared/shared.module';
 import { SidenavService } from './sidenav.service';
 
 describe('SidenavService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+
+
+ beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [ SharedModule ]
+    })
+    .compileComponents();
+  }));
 
   it('should be created', () => {
     const service: SidenavService = TestBed.get(SidenavService);

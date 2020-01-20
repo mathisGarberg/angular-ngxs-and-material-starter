@@ -7,7 +7,7 @@
     "start:prod": "npm run build:prod && npm run server",
     "build": "ng build",
     "build:prod": "ng build --prod",
-    "test": "ng lint && ng test --configuration=test",
+    "test": "ng lint && ng test",
     "watch": "ng test --configuration=test --browsers ChromeHeadless --watch",
     "lint": "ng lint",
     "format:write": "prettier projects/**/*.{ts,json,md,scss} --write",
@@ -19,7 +19,8 @@
     "e2e:runserver": "http-server ../dist -a localhost -p 50000 -silent -c-1",
     "e2e: dev": "start ng serve --port 50000 && start cypress open",
     "hmr": "ng serve --configuration hmr --port 50000",
-    "cypress": "concurrently \"ng serve\" \"cypress open\""
+    "cypress": "concurrently \"ng serve\" \"cypress open\"",
+    "e2e:dev": "start ng serve --port 50000 && start cypress open"
   },
   "husky": {
     "hooks": {

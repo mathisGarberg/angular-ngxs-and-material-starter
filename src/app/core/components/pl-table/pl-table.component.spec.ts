@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { SharedModule } from '@shared/shared.module';
 import { PlTableComponent } from './pl-table.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('PlTableComponent', () => {
   let component: PlTableComponent;
@@ -8,7 +9,8 @@ describe('PlTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlTableComponent ]
+      declarations: [ PlTableComponent ],
+      imports: [ SharedModule, HttpClientTestingModule ]
     })
     .compileComponents();
   }));
