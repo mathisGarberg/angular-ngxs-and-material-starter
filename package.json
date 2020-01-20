@@ -61,7 +61,7 @@
     "ngx-bar-rating": "^1.1.0",
     "promise-polyfill": "8.1.3",
     "rxjs": "~6.5.4",
-    "subsink": "^1.0.0",
+    "subsink": "^1.0.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
