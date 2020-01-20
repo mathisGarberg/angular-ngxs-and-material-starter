@@ -12,7 +12,6 @@ import { Navigate } from '@ngxs/router-plugin';
 import { environment as env } from '@env';
 import { AppInsightsService } from '@markpieszak/ng-application-insights';
 import { SettingsState, SettingsStateModel } from './core/states/settings.state';
-import { map } from 'rxjs/operators';
 import { SidenavService } from './core/services/sidenav.service';
 import { ChangeThemeAction } from './core/actions/settings.action';
 import { IconService } from './core/services/icon.service';
