@@ -8,14 +8,19 @@ import { SidenavComponent } from './core/components/sidenav/sidenav.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { PlTableComponent } from './core/components/pl-table/pl-table.component';
 import { AppInsightsService } from '@markpieszak/ng-application-insights';
-import { Store } from '@ngxs/store';
+import { Store, NgxsModule } from '@ngxs/store';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        SharedModule
+        SharedModule,
+        NgxsModule.forRoot(),
+        NoopAnimationsModule,
+        HttpClientTestingModule
       ],
       declarations: [
         AppComponent,
@@ -27,7 +32,8 @@ describe('AppComponent', () => {
       ],
       providers: [
         AppInsightsService,
-        Store
+        Store,
+
       ]
     }).compileComponents();
   }));
