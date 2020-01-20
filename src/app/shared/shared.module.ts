@@ -42,6 +42,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ShowErrorsComponent } from './components/show-errors/show-errors.component';
 import { FavoriteButtonComponent } from './components/favorite-button/favorite-button.component';
 import { FollowButtonComponent } from './components/follow-button/follow-button.component';
+import { ShowAuthedDirective } from './directives/show-authed.directive';
 
 library.add(
   faBars,
@@ -79,7 +80,8 @@ library.add(
     BigInputComponent,
     ShowErrorsComponent,
     FavoriteButtonComponent,
-    FollowButtonComponent
+    FollowButtonComponent,
+    ShowAuthedDirective
   ],
   imports: [
     MaterialModule,
