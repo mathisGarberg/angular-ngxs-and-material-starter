@@ -71,7 +71,7 @@
                   "name": "main",
                   "baseline": "1024kb",
                   "maximumWarning": "100kb",
-                  "maximumError": "200kb"
+                  "maximumError": "250kb"
                 }
               ]
             }

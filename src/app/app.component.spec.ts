@@ -33,7 +33,6 @@ describe('AppComponent', () => {
       providers: [
         AppInsightsService,
         Store,
-
       ]
     }).compileComponents();
   }));
