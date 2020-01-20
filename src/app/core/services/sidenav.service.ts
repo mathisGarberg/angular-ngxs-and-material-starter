@@ -12,6 +12,9 @@ export class SidenavService {
   }
 
   public toggleSideMenu(): void {
+    if (!this.sideMenu) {
+      return;
+    }
     this.sideMenu.toggle();
   }
 

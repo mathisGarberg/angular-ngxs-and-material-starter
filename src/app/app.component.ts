@@ -38,8 +38,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   navigation = [
     { link: 'about', label: 'About' },
-    { link: 'feature-list', label: 'News' },
-    { link: 'examples', label: 'Forum' }
+    // { link: 'feature-list', label: 'News' },
+    // { link: 'examples', label: 'Forum' }
   ];
 
   navigationSideMenu = [
