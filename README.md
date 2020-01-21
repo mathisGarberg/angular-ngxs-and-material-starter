@@ -19,11 +19,6 @@ by [@mathisGarberg](https://twitter.com/MathGarb)
 * [Blog post about clean code principles you should adapt to your Angular project]()
 
 
-## DNS
-
-## Feedback
-
-
 ## How to run
 
 When startin the application please use `npm start`, this triggers `ng serve --open --port 50000.
