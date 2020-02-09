@@ -44,7 +44,7 @@
     "@angular/router": "^8.2.14",
     "@fortawesome/angular-fontawesome": "^0.5.0",
     "@fortawesome/fontawesome-free": "^5.8.2",
-    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.8.2",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@markpieszak/ng-application-insights": "^8.0.1",
