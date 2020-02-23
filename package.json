@@ -49,7 +49,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@markpieszak/ng-application-insights": "^8.0.1",
     "@ngxs/devtools-plugin": "^3.6.1",
-    "@ngxs/form-plugin": "^3.6.1",
+    "@ngxs/form-plugin": "^3.6.2",
     "@ngxs/hmr-plugin": "^3.6.2",
     "@ngxs/logger-plugin": "^3.6.0",
     "@ngxs/router-plugin": "^3.6.2",
